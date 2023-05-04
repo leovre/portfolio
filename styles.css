@@ -1,0 +1,12 @@
+body{
+    background-image: url('/images/layered-waves-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+    height:auto;
+    color:white
+}
+
+.center{
+    text-align: center;
+}
