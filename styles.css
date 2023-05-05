@@ -1,12 +1,41 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    display:flex;
+    flex-direction: column;
     background-image: url('/images/layered-waves-haikei.svg');
     background-size: cover;
     background-position: center;
-    min-height:100vh;
-    height:auto;
-    color:white
+    min-height: 100vh;
+    height: auto;
+    color: white;
+    font-family: 'Asap', sans-serif;
 }
 
-.center{
+.center {
     text-align: center;
+}
+
+.left-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    height: auto;
+    text-align: center;
+}
+
+.bio{
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 1em;
+    line-height: 1.5em;
+  
+}
+
+@media screen and (max-width: 600px) {
+    .bio{
+        font-size:5vw;
+    }
 }
