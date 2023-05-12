@@ -32,9 +32,13 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 55vh;
-    border: 1px red solid;
+
 }
 
 ul {
     list-style: none;
+}
+
+.project-image{
+    margin:5px;
 }
