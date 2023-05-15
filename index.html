@@ -17,23 +17,26 @@
 
     <main>
         <section id="skills">
-            <h2 class="center" style="font-size: 1.7em;">Skills</h2>
+            <h2 class="center" style="font-size: 2.5em;">Skills</h2>
+
             <div class="skills">
                 <ul>
                     <div class="card">
-                        <h4 style="color: #fca311;" class="center">Frontend </h5>
-                            <li class="skill-card">React</li>
-                            <li class="skill-card">JQuery</li>
-                            <li class="skill-card">CSS</li>
-                            <li class="skill-card">HTML</li>
-                            <li class="skill-card">Ajax</li>
-                            <li class="skill-card">Bootstrap</li>
-                            <li class="skill-card">Materialize</li>
+                        <h3 style="color: #fca311;" class="center">Frontend </h3>
+                        <hr>
+                        <li class="skill-card">React</li>
+                        <li class="skill-card">JQuery</li>
+                        <li class="skill-card">CSS</li>
+                        <li class="skill-card">HTML</li>
+                        <li class="skill-card">Ajax</li>
+                        <li class="skill-card">Bootstrap</li>
+                        <li class="skill-card">Materialize</li>
                     </div>
                 </ul>
                 <ul>
                     <div class="card">
-                        <h4 style="color: #fca311;" class="center">Programming</h4>
+                        <h3 style="color: #fca311;" class="center">Programming</h3>
+                        <hr>
                         <li class="skill-card">GitHub</li>
                         <li class="skill-card">Git</li>
                         <li class="skill-card">Python</li>
@@ -44,7 +47,8 @@
                 </ul>
                 <ul>
                     <div class="card">
-                        <h4 style="color: #fca311;" class="center">Backend</h4>
+                        <h3 style="color: #fca311;" class="center">Backend</h3>
+                        <hr>
                         <li class="skill-card">MongoDB</li>
                         <li class="skill-card">Express</li>
                         <li class="skill-card">NodeJS</li>
@@ -59,8 +63,8 @@
             </div>
         </section>
 
-        <section class="center projects">
-            <h2 class="center" style="font-size: 1.7em;">Projects</h2>
+        <section class="center projects"  style="margin-top: 5em;">
+            <h2 class="center" style="font-size: 2.5em;">Projects</h2>
 
             <div class="row">
                 <div class="image-container">
@@ -110,9 +114,15 @@
 
         </section>
 
-        <section class="center">
-            <h2 style="font-size: 1.7em;">Resume</h2>
-            <a href="/sources/Leonardo-Rodriguez-SE-resume.pdf" target="_blank"><img src="/images/resume-sc.png" alt="Resume" height="800px"></a>
+        <section class="center" style="margin-top: 5em;">
+            <h2 style="font-size: 2.5em;" >Resume</h2>
+            <div class="image-container resume-image">
+                <img src="/images/resume-sc.png" alt="Resume" height="800px">
+                <div class="overlay">
+                    <a href="/sources/Leonardo-Rodriguez-SE-resume.pdf" target="_blank">View </a>
+                </div>
+            </div>
+
         </section>
 
         <section id="footer">
@@ -123,7 +133,17 @@
             </footer>
         </section>
 
-        <script src="/main.js"></script>
+        <script>
+            const skillCards = document.querySelectorAll('.skill-card');
+
+            function addTransform() {
+                const randomIndex = Math.floor(Math.random() * skillCards.length);
+                skillCards[randomIndex].classList.add('transform');
+            }
+
+            setInterval(addTransform, 2000); // Change the time interval as desired
+
+        </script>
     </main>
 </body>
 
