@@ -44,9 +44,7 @@ ul {
     font-size: 1.4em;
 }
 
-.project-image {
-    margin: 5px;
-}
+
 
 footer {
     display: flex;
@@ -69,4 +67,72 @@ footer {
 
 a {
     color: white
+}
+
+.projects{
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap:20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.image-container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.overlay a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width: 1350px) {
+    .image-container {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
 }
